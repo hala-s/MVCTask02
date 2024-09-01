@@ -1,0 +1,19 @@
+﻿
+@model User
+
+<h1>Register</h1>
+<form asp-controller="Users" asp-action="Register">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="CreatedAT" class="form-label"></label>
+        <input asp-for="CreatedAT" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

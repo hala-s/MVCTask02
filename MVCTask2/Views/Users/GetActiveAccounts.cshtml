@@ -1,0 +1,26 @@
+﻿@model List<User>
+
+<h1>ActiveAccounts</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>
+                    <form asp-controller="Users" asp-action="ActiveAccounts" method="post">
+                        <input type="hidden" name="id" value="@user.UserId" />
+                        <button type="submit">Activate</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
